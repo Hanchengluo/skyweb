@@ -1,0 +1,451 @@
+
+<!doctype html>
+<html>
+<head> 
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>skyshop仿小米商城--deitui.com</title>
+<meta name="keywords" content="skyshop仿小米商城" />
+<meta name="description" content="skyshop仿小米商城" />
+ <base href="http://skyshop.deitui.com/"> 
+<link href="/plugin/skyweb/skyweb.css" rel="stylesheet">
+<link href="/plugin/iconfont/iconfont.css" rel="stylesheet">
+ <script src="/plugin/jquery/jquery-2.1.3.min.js"></script>
+<script src="/plugin/skyweb/skyweb.js"></script>
+<script src="/static/js/app.js?v=32"></script>
+<script>
+var IMAGES_SITE="http://skyshop.deitui.com/"; 
+</script>
+<link href="/static/css/app.css" rel="stylesheet" />
+<link href="/themes/skyshop/index/css/mi.css" rel="stylesheet" />
+<link href="/themes/skyshop/index/images/app.css" rel="stylesheet" />
+<style>
+.box960{width:1226px;}
+.mgr0{margin-right:0px !important;}
+.breadcrumb{padding:15px 15px;}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="header" style="background-color:#fff;">
+	<div class="nav-top">
+        	<div class="box960">
+            	欢迎使用SKYSHOP商城系统
+                <div class="right">
+                           <div class="item"><a href="/index.php?m=register">注册</a></div>
+           <div class="item"><a href="/index.php?m=login">登陆</a></div>
+                         <div class="item item-cart"><a href="/index.php?m=order_cart"><i class="iconfont icon-cart"></i> 购物车 <span class="cart-num" id="top_cart_num">( <span>0</span> )</span></a></div>
+                 
+                </div>
+            </div>
+        </div>
+         
+		<style>
+		.nav-top{color: #fff;background: #333; font-size:12px;}
+		.nav-top .item{float:left; margin-right:20px;}
+		.nav-top .item-cart{background-color:#f60; padding:0px 20px; font-size:12px;}
+		.nav-top .item-cart .icon-cart{font-size:18px;}
+		.nav-top .dropdown>a{color:#fff;}
+		.nav-top .item>a{color:#fff;}
+		img{border:0px;}
+		.minav{background-color:#fff; position:relative; padding: 12px 0 0 30px;    font-size: 16px;}
+		.minav .logo{float:left; margin-right:20px;}
+	 	.minav .item{float:left;}
+		.minav .item>a{    display: block;
+    padding: 26px 18px 38px;
+    color: #333;}
+	.minav .item>a:hover{color:#ff6700;}
+        </style>
+        <div class=" box960">
+        <div class="minav">
+        	
+        	<div class="logo "><a href="/index.php"><img src="http://skyshop.deitui.com/attach/site/2016/01/19/c1a3a4e87bc61d962c57a5518c7bbf0d.png" style="height:55px;    margin-top: 10px;" /></a></div>
+            <div class="item showallcatbox">
+            	<a href="javascript:;">全部商品分类</a>
+                <style>
+	.allcatbox{position:absolute; display:none; top:100%; left:0px;     background: rgba(0,0,0,0.5); border:1px solid #f90; z-index:9999 !important;}
+	.allcatbox .pd{padding:20px 0px;}
+	.allcatbox.index{display:block;height:460px;}
+	.allcatbox .cat1{display:block; width:264px;}
+	
+	
+	.allcatbox .cat1>a{padding:11px 10px; display:block; text-decoration:none;color:#fff;}
+	.allcatbox .cat1>a .iconfont{float:right;}
+	.allcatbox .cat1:hover{background-color:#ff6700;}
+	.allcatbox .cat1:hover>a{color:#fff;}
+	.allcatbox .childbox{display:none; position:absolute; left:235px; top:0px; bottom:0px; background-color:#fff; width:200px; border:1px solid #eee; padding:20px;}
+	.allcatbox .child{display:block;  height:50px; line-height:50px; margin-bottom:10px;}
+	.allcatbox .child .img img{width:40px; float:left; margin-right:20px;}
+</style>
+<div class="allcatbox ">
+	<div class="pd">
+	            <div class="cat1" v="5"><a href="/index.php?m=list&catid=5">手机平板 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox5">
+                            <a href="/index.php?m=show&id=6861" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/61/6861/1bde4b76b2aed786921cd0889b2e87bf.jpg.100x100.jpg"></span>  小米手机4 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="6"><a href="/index.php?m=list&catid=6">电视盒子 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox6">
+                            <a href="/index.php?m=show&id=6862" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/62/6862/b220e82401e88e6632eaf558debd0c5b.jpg.100x100.jpg"></span>  小米电视主机 </a>
+                            <a href="/index.php?m=show&id=6865" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/65/6865/a5586dfc7d8b1580e05bd64c62df0cc4.png.100x100.jpg"></span>  小米盒子mini版(礼 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="7"><a href="/index.php?m=list&catid=7">智能硬件 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox7">
+                            <a href="/index.php?m=show&id=6863" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/63/6863/53a79d66137dd2fa19a6a10b6f3fd197.jpg.100x100.jpg"></span>  小米路由器 mini </a>
+                            <a href="/index.php?m=show&id=6864" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/64/6864/4e0645c4b014261103416cdaa4062edc.jpg.100x100.jpg"></span>  小米手环 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="8"><a href="/index.php?m=list&catid=8">电源插线 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox8">
+                        </div>
+                </div>
+                   <div class="cat1" v="9"><a href="/index.php?m=list&catid=9">耳机音响 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox9">
+                            <a href="/index.php?m=show&id=6866" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/66/6866/a7e533ef346e9f2eb139667b63524187.jpg.100x100.jpg"></span>  小米蓝牙耳机 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="10"><a href="/index.php?m=list&catid=10">电池存储卡 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox10">
+                        </div>
+                </div>
+                   <div class="cat1" v="11"><a href="/index.php?m=list&catid=11">保护套 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox11">
+                        </div>
+                </div>
+                   <div class="cat1" v="12"><a href="/index.php?m=list&catid=12">贴膜 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox12">
+                        </div>
+                </div>
+                   <div class="cat1" v="13"><a href="/index.php?m=list&catid=13">服装 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox13">
+                        </div>
+                </div>
+               </div>
+</div>
+
+<script>
+	$(document).on("mouseenter",".showallcatbox",function(){
+		$(".allcatbox").show();
+	});
+	$(document).on("mouseleave",".showallcatbox",function(){
+		$(".allcatbox").hide();
+	});
+	$(document).on("mouseenter",".allcatbox .cat1",function(){
+		var v=$(this).attr("v");
+		$(".childbox").hide();
+		$(".childbox"+v).show();
+		
+	});
+	
+	$(document).on("mouseleave",".allcatbox .cat1",function(){
+ 
+		$(".childbox").hide();
+ 
+		
+	});
+</script>            </div>
+                        	             <div class="item"><a href="/index.php?m=list&catid=5">手机平板</a></div>
+                                     	             <div class="item"><a href="/index.php?m=list&catid=6">电视盒子</a></div>
+                                     	             <div class="item"><a href="/index.php?m=list&catid=7">智能硬件</a></div>
+                                     	                        	                        	                        	                        	                        	                        	                       <div class="item"><a href="/index.php?m=goldgoods">积分商城</a></div>
+            <div class="item"><a href="/index.php?m=article">资讯服务</a></div>
+            <div class="item"><a href="/index.php?m=forum">社区</a></div>
+           
+          
+            
+            <div class="item">
+            	<div style="position:absolute; right:10px; top:30px;">
+                	<div class="search-bar">
+                        <input type="text" class="search-input" id="search-word" style="width:200px; height:40px;" value="">
+                        <button type="button" class="search-btn btn-warning" style="background-color: #fff; height:42px;
+  color: #666; border:1px solid #aaa; cursor:pointer;" id="search-submit" ><i class="iconfont  icon-search"></i></button>
+                        <div class="clearfix"></div>
+                    
+               		</div>
+                    <ul class="search-like" style="display: none;">
+                    
+                   <li><a href="/index.php?m=search&type=product&keyword=">搜索<font color="red">  </font>相关产品</a></li>
+                    <li><a href="/index.php?m=search&type=article&keyword=">搜索<font color="red">  </font>相关文章</a></li>
+                   </ul>
+                
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+    </div>	 	 
+    </div>
+    
+<script>
+	function top_cart_num(){
+		$.get("/index.php?m=ajax&a=cart_num",function(data){
+			if(data>0){
+				$("#top_cart_num span").html(data).show();
+			}else{
+				$("#top_cart_num").hide();
+			}
+		});
+	}
+$(document).ready(function(){
+	var sarr=new Array(
+	
+	{url:"/index.php?m=search&type=product",word:"产品"},
+		{url:"/index.php?m=search&type=article",word:"文章"},
+		{url:"/index.php?m=search&type=forum",word:"帖子"}
+	);
+	var keywords;
+	$("#search-word").keyup(function(){
+		keywords=$("#search-word").val();
+		str="";
+		for(var i=0;i<sarr.length;i++){ 
+			str+="<li><a href='"+sarr[i].url+"&keyword="+keywords+"'>搜索<font color='red'> "+keywords+" </font>相关"+sarr[i].word+"</a></li>";
+		}
+		
+		$(".search-like li").remove();
+		$(".search-like").append(str).show();
+	})
+	$("#search-word").bind("focus click",function(){
+		keywords=$("#search-word").val();
+		if(keywords!=''){ 
+		str="";
+			for(var i=0;i<sarr.length;i++){ 
+				str+="<li><a href='"+sarr[i].url+"&keyword="+encodeURI(keywords)+"'>搜索<font color='red'> "+keywords+" </font>相关"+sarr[i].word+"</a></li>";
+			}
+		$(".search-like li").remove();
+		$(".search-like").append(str).show();
+		}
+	})
+	
+	$(".search-like").on("mouseleave focusout",function(){
+		$(".search-like").hide();
+	});
+	
+	$("#search-submit").on("click",function(){
+		keywords=$("#search-word").val();
+		if(keywords!=''){ 
+			window.location.href="/index.php?m=search&type=product&keyword="+encodeURI(keywords);		
+		}
+	});
+	
+	top_cart_num();
+	
+});
+</script> 
+ <div class="main-body">
+ 	<div class="box960">
+    <!--start 导航-->
+<div class="container"><div class="row">
+<div class="span12">
+<ul class="breadcrumb">
+  <li><a href="/index.php">首页</a><span class="divider">/</span></li>
+  <li><a href="/index.php?m=list&catid=2">小米</a> <span class="divider">/</span></li>
+      <li class="active">列表</li>
+      
+</ul>
+</div>
+</div>
+</div>
+<!--END 导航-->    <div class="row">
+    	 
+        <div class="row">
+        <div id="search-filter-box">
+           <!--筛选-->
+           <input type="hidden"  id="filter_catid" value="2">
+    <input type="hidden" id="filter_order" value="buy_num">
+    <input type="hidden" id="filter_attr_1" value="">
+   	<input type="hidden" id="filter_attr_2" value="">
+    <input type="hidden" id="filter_attr_3" value="">
+    <input type="hidden" id="filter_attr_4" value="">
+      
+      <input type="hidden" id="filter_price" value="0">
+       <script>
+    $(function(){
+		var catid=$("#filter_catid").val();
+		var orderby=$("#filter_order").val();
+		var attr_1=$("#filter_attr_1").val();
+		var attr_2=$("#filter_attr_2").val();
+		var attr_3=$("#filter_attr_3").val();
+		var attr_4=$("#filter_attr_4").val();
+		var brand_id=$("#filter_brand").val();
+		var price=$("#filter_price").val();
+		$(".select_catid").bind("click",function(e){
+			e.preventDefault();
+			var catid=$(this).attr("catid");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&brand_id="+brand_id+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		$(".select_attr_1").bind("click",function(e){
+			e.preventDefault();
+			var attr_1=$(this).attr("v");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&brand_id="+brand_id+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		
+		$(".select_attr_2").bind("click",function(e){
+			e.preventDefault();
+			var attr_2=$(this).attr("v");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&brand_id="+brand_id+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		
+		$(".select_attr_3").bind("click",function(e){
+			e.preventDefault();
+			var attr_3=$(this).attr("v");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&brand_id="+brand_id+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		
+		$(".select_attr_4").bind("click",function(e){
+			e.preventDefault();
+			var attr_4=$(this).attr("v");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&brand_id="+brand_id+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		
+		$(".select_orderby").bind("click",function(e){
+			e.preventDefault();
+			var orderby=$(this).attr("v");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&brand_id="+brand_id+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		
+		
+		
+		$(".select_brand").bind("click",function(e){
+			e.preventDefault();
+			var brand_id=$(this).attr("v");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&brand_id="+brand_id+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		
+		$(".select_price").bind("click",function(e){
+			e.preventDefault();
+			var price=$(this).attr("v");		
+			var url="/index.php?m=list&catid="+catid+"&orderby="+orderby+"&attr_1="+attr_1+"&attr_2="+attr_2+"&attr_3="+attr_3+"&attr_4="+attr_4+"&price="+price+"#select_box";
+			window.location=url;
+		});
+		
+	});
+    </script>
+    <style>
+		.search-filter-box .search-filter{line-height:40px; border-bottom:1px solid #ccc; margin-bottom:20px}
+    	.search-filter-box .search-filter .hd{font-size:16px; margin-right:20px; font-weight:800; display:inline-block; text-align:right; width:60px;}
+		.search-filter-box .search-filter .search-option{margin-right:10px; display:inline-block; height:28px; line-height:30px; padding:0px 8px;}
+		.search-filter-box .search-filter .search-option.active{margin-right:10px; background-color:#ccc;}
+    </style>
+           <div class="search-filter-box">
+           		<div class="search-filter">
+                	<span class="hd">分类:</span>
+                                       	 <a href="javascript:;" class="search-option active   select_catid" catid="2" >全部</a>
+                                        
+                     <a href="javascript:;" class="search-option    select_catid" catid="5">手机平板</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="6">电视盒子</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="7">智能硬件</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="8">电源插线</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="9">耳机音响</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="10">电池存储卡</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="11">保护套</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="12">贴膜</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="13">服装</a> 
+ <a href="javascript:;" class="search-option    select_catid" catid="14">箱包</a> 
+                </div>
+                
+           
+           		           		                
+                           </div>
+           <!--End 筛选-->
+           </div>
+        </div>
+           <div class="prolist">
+        	 
+                        <div class="item ">
+                <div class="img"><a href="/index.php?m=show&id=6861"><img src="http://skyshop.deitui.com/attach/product/0/0/68/61/6861/1bde4b76b2aed786921cd0889b2e87bf.jpg" ></a></div>
+                <div class="title"><a href="/index.php?m=show&id=6861">小米手机4</a></div>
+                <div class="desc">工艺和手感超乎想象</div>
+                <div class="price">￥1299.0</div>
+            </div>
+                 
+                        <div class="item ">
+                <div class="img"><a href="/index.php?m=show&id=6862"><img src="http://skyshop.deitui.com/attach/product/0/0/68/62/6862/b220e82401e88e6632eaf558debd0c5b.jpg" ></a></div>
+                <div class="title"><a href="/index.php?m=show&id=6862">小米电视主机</a></div>
+                <div class="desc">次世代智能电视主机，内置独立音响</div>
+                <div class="price">￥999.0</div>
+            </div>
+                 
+                        <div class="item ">
+                <div class="img"><a href="/index.php?m=show&id=6866"><img src="http://skyshop.deitui.com/attach/product/0/0/68/66/6866/a7e533ef346e9f2eb139667b63524187.jpg" ></a></div>
+                <div class="title"><a href="/index.php?m=show&id=6866">小米蓝牙耳机</a></div>
+                <div class="desc">2015德国IF大奖，高清通话音质</div>
+                <div class="price">￥79.0</div>
+            </div>
+                 
+                        <div class="item ">
+                <div class="img"><a href="/index.php?m=show&id=6865"><img src="http://skyshop.deitui.com/attach/product/0/0/68/65/6865/a5586dfc7d8b1580e05bd64c62df0cc4.png" ></a></div>
+                <div class="title"><a href="/index.php?m=show&id=6865">小米盒子mini版(礼品装)</a></div>
+                <div class="desc">10亿美金影视库，内容新增83%</div>
+                <div class="price">￥0.0</div>
+            </div>
+                 
+                        <div class="item mgr0">
+                <div class="img"><a href="/index.php?m=show&id=6864"><img src="http://skyshop.deitui.com/attach/product/0/0/68/64/6864/4e0645c4b014261103416cdaa4062edc.jpg" ></a></div>
+                <div class="title"><a href="/index.php?m=show&id=6864">小米手环</a></div>
+                <div class="desc"></div>
+                <div class="price">￥69.0</div>
+            </div>
+                 
+                        <div class="item ">
+                <div class="img"><a href="/index.php?m=show&id=6863"><img src="http://skyshop.deitui.com/attach/product/0/0/68/63/6863/53a79d66137dd2fa19a6a10b6f3fd197.jpg" ></a></div>
+                <div class="title"><a href="/index.php?m=show&id=6863">小米路由器 mini</a></div>
+                <div class="desc">主流双频AC智能路由器</div>
+                <div class="price">￥120.0</div>
+            </div>
+                 
+                        <div class="clearfix"></div>
+        </div>
+        <div class="row"></div>
+       
+         
+        </div>
+    </div>
+    </div>
+ 
+
+<div class="footer">
+    	<div class="row box960">
+        	<div class="col-3-1">
+            	<div class="footer-border">
+                	<div class="footer-hd">关于我们</div>
+                    <p>打造创业者与投资者的桥梁</p>
+                </div>
+            </div>
+            <div class="col-3-1">
+            	<div class="footer-border">
+                	<div class="footer-hd">联系我们</div>
+                    <p>QQ:362606856</p>
+                </div>
+            </div>
+            <div class="col-3-1">
+            	<div>
+                	<div class="footer-hd">加入我们</div>
+                    <p>欢迎您的加入</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+  </div>
+</body>
+</html>

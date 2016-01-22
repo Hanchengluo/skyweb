@@ -1,0 +1,90 @@
+<div class="pd-5">
+            <div class="input-row">
+              <label>名字</label>
+              <input type="text" placeholder="请输入名字" >
+            </div>
+            <div class="input-row">
+              <label>密码</label>
+              <input type="password" class="txt" placeholder="请输入密码" >
+            </div>
+            <div class="row mgb-10">
+                <div class="radio-js">
+                    <input type="hidden" name="gender" value="1">
+                    <div class="label">性别</div>
+                    <div class="radio-item active l" v="1">男</div>
+                    <div class="radio-item r" v="2">女</div>
+                </div>
+            </div>
+            
+            <div class="btn-upload">
+            	<i class="iconfont icon-upload"></i> 上传图片
+            	<div class="btn-upload-file">
+                	<input type="file"> 
+                </div>
+            </div>
+            
+            <div style=" position:relative; margin:10px;">
+                	<div class="search-bar">
+                        <input type="text" class="search-input" id="search-word" style="width:200px; height:40px;" value="">
+                        <button type="button" class="search-btn btn-warning" style="background-color: #fff; height:42px;
+  color: #666; border:1px solid #aaa; cursor:pointer;" id="search-submit"><i class="iconfont  icon-search"></i></button>
+                        <div class="clearfix"></div>
+                    
+               		</div>
+                    <ul class="search-like" style="display: none;"></ul>
+                	<script>
+					$(document).ready(function(){
+	var sarr=new Array(
+	
+	{url:"#",word:"产品"},
+		{url:"#",word:"文章"},
+		{url:"#",word:"帖子"}
+	);
+	var keywords;
+	$("#search-word").keyup(function(){
+		keywords=$("#search-word").val();
+		str="";
+		for(var i=0;i<sarr.length;i++){ 
+			str+="<li><a href='"+sarr[i].url+"&keyword="+keywords+"'>搜索<font color='red'> "+keywords+" </font>相关"+sarr[i].word+"</a></li>";
+		}
+		
+		$(".search-like li").remove();
+		$(".search-like").append(str).show();
+	})
+	$("#search-word").bind("focus click",function(){
+		keywords=$("#search-word").val();
+		if(keywords!=''){ 
+		str="";
+			for(var i=0;i<sarr.length;i++){ 
+				str+="<li><a href='"+sarr[i].url+"&keyword="+encodeURI(keywords)+"'>搜索<font color='red'> "+keywords+" </font>相关"+sarr[i].word+"</a></li>";
+			}
+		$(".search-like li").remove();
+		$(".search-like").append(str).show();
+		}
+	})
+	
+	$(".search-like").on("mouseleave focusout",function(){
+		$(".search-like").hide();
+	});
+	
+	$("#search-submit").on("click",function(){
+		keywords=$("#search-word").val();
+		if(keywords!=''){ 
+			//window.location.href="/index.php?m=search&type=product&keyword="+encodeURI(keywords);		
+		}
+	});
+	
+ 
+	
+});
+</script>
+
+                </div>
+            <div class="textarea-row">
+              <label>介绍</label>
+              <textarea class="textarea" placeholder="请写介绍"></textarea>
+            </div>
+            <div class="pd-10">
+              <button class="btn btn-row">保存</button>
+            </div>
+          </div>

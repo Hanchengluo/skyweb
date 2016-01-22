@@ -1,0 +1,91 @@
+<div class="search-filter-box">
+<input type="hidden" id="filter_catid" value="2">
+<input type="hidden" id="filter_order" value="all">
+
+    <input type="hidden" id="filter_attr1" value="2">
+   	<input type="hidden" id="filter_attr2" value="2015" >
+  <script>
+    $(function(){
+		var catid=$("#filter_catid").val();
+		var orderby=$("#filter_order").val();
+		var attr1=$("#filter_attr1").val();
+		var attr2=$("#filter_attr2").val();
+		var url;
+		$(".search-option").bind("click",function(e){
+			e.preventDefault();
+			$(this).parents(".search-filter").find(".search-option").removeClass("active");
+			$(this).addClass("active");
+			var v=$(this).attr("v");
+			var obj=$(this).parents(".search-filter").attr("o");
+			eval(obj+"='"+v+"'");		
+			url="/index.php?m=shop_baojia&catid="+catid+"&orderby="+orderby+"&attr1="+attr1+"&attr2="+attr2+"#select_box";
+			 
+		});
+
+	})
+</script>
+    <div class="search-filter" o="catid">
+        <div class="hd">类别</div>
+        <div class="search-option-box">
+        <div class="pd">
+        <div class="search-option " v="0">全部</div>
+                <div class="search-option " v="1">白毫银针</div>
+                <div class="search-option active" v="2">白牡丹</div>
+                <div class="search-option " v="3">贡眉</div>
+                </div>
+        </div>
+        
+    </div>
+    
+    <div class="search-filter" o="attr1">
+        <div class="hd">品质</div>
+        <div class="search-option-box">
+        <div class="pd">
+        <div class="search-option " v="0">全部</div>
+                <div class="search-option " v="1">银针特级</div>
+                <div class="search-option active" v="2">银针一级</div>
+                <div class="search-option " v="3">银针二级</div>
+                <div class="search-option " v="11">牡丹特级</div>
+                <div class="search-option " v="12">牡丹一级</div>
+                <div class="search-option " v="13">牡丹二级</div>
+                <div class="search-option " v="14">牡丹三级</div>
+                <div class="search-option " v="21">贡眉特级</div>
+                <div class="search-option " v="22">贡眉一级</div>
+                <div class="search-option " v="23">贡眉二级</div>
+                <div class="search-option " v="24">贡眉三级</div>
+                </div>
+       
+        </div>
+    </div>
+    
+    <div class="search-filter" o="attr2">
+        <div class="hd">价格</div>
+        <div class="search-option-box">
+        <div class="pd">
+        <div class="search-option " v="0">全部</div>
+                <div class="search-option " v="2016">2016</div>
+                <div class="search-option active" v="2015">2015</div>
+                <div class="search-option " v="2014">2014</div>
+                <div class="search-option " v="2013">2013</div>
+                <div class="search-option " v="2012">2012</div>
+                <div class="search-option " v="2011">2011</div>
+                <div class="search-option " v="2010">2010</div>
+                <div class="search-option " v="2009">2009</div>
+                <div class="search-option " v="2008">2008</div>
+                <div class="search-option " v="2007">2007</div>
+                </div>
+        </div>
+    </div>
+    
+    <div class="search-filter" o="orderby">
+        <div class="hd">排序</div>
+        <div class="search-option-box">
+        <div class="pd">
+                <div class="search-option active" v="all">综合排序</div>
+                <div class="search-option " v="price">价格</div>
+                <div class="search-option " v="id">发布时间</div>
+                </div>
+        </div>
+    </div>
+    
+</div>

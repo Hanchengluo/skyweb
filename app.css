@@ -1,0 +1,20 @@
+.btn {
+	margin-bottom: 5px;
+}
+body {
+	background-color: #fff;
+	padding-top:50px;
+}
+
+.header {
+    display: block;
+    position: fixed;
+    top: 0px;
+    z-index: 9990;
+    left: 0px;
+    right: 0px;
+    background-color: #3199e8;
+    height: 44px;
+    margin-bottom: 10px;
+    color: #fff;
+}

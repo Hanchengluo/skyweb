@@ -1,0 +1,61 @@
+<h3>swipe.js</h3>
+<div id="slides-flash" class="swipejs">     
+<div class="swipejs-wrap" style="width: 1280px;">       
+<div class="item"   data-index="0"><a href="" style="text-align:center;"><img class="img" src="http://skyshop.deitui.com/attach/ad/0/0/0/1/1/46b5d2cf93318ae337a61855cbf688de.jpg" style=" max-width:100%;  max-height:248px;"></a>
+        <div class="bg"></div>
+        <div class="title">asdas</div>
+      </div>
+            <div class="item" ><a href="" style="text-align:center;"><img class="img" src="http://skyshop.deitui.com/attach/ad/0/0/0/2/2/acce23b2d5304314fddfbe02440e0a58.jpg" style=" max-width:100%;  max-height:248px;"></a>
+        <div class="bg"></div>
+        <div class="title">轮显2</div>
+      </div>
+       <div class="item"  data-index="2"><a href="" style="text-align:center;"><img class="img" src="http://skyshop.deitui.com/attach/ad/0/0/0/1/1/46b5d2cf93318ae337a61855cbf688de.jpg" style=" max-width:100%;  max-height:248px;"></a>
+        <div class="bg"></div>
+        <div class="title">asdas</div>
+      </div><div class="item"  data-index="3"><a href="" style="text-align:center;"><img class="img" src="http://skyshop.deitui.com/attach/ad/0/0/0/2/2/acce23b2d5304314fddfbe02440e0a58.jpg" style=" max-width:100%;  max-height:248px;"></a>
+        <div class="bg"></div>
+        <div class="title">轮显2</div>
+      </div></div>
+    <div class="swipejs-num"><i class=""></i><i class="active"></i></div>
+    <div class="swipejs-prev" onclick="mySwipe.prev()"><i class="iconfont icon-zuo"></i></div>
+    <div class="swipejs-next" onclick="mySwipe.next()"><i class="iconfont icon-you"></i></div>
+    <div class="swipejs-nav-bg"></div>
+    <div class="swipejs-nav"><span class="index">2</span> / <span class="total">2</span></div>
+  </div>
+  
+  <style>
+  .swipejs .item{height:120px;}
+  </style>
+  <link href="skyweb/swipe/swipe.css" rel="stylesheet">
+  <script src="skyweb/swipe/swipe.js"></script>
+  <script>
+   
+	 $(function() {
+		var elem = document.getElementById('slides-flash');
+		window.mySwipe_total=$("#slides-flash .item").length;
+		
+		$("#slides-flash .total").html(mySwipe_total);
+		for(var i=0;i<mySwipe_total;i++){
+			$("#slides-flash .swipejs-num").append("<i></i>");
+		}
+		$("#slides-flash .swipejs-num i").eq(0).addClass("active");
+		window.mySwipe = Swipe(elem, {
+		  startSlide: 0,
+		  auto: 3000,
+		   callback: function(pos, element) {
+			    if (mySwipe_total < 3) {
+                            i = ((pos + 1) > 2) ? (pos - 1) : (pos + 1)
+                        } else {
+                            i = pos + 1;
+                        }
+				$("#slides-flash .swipejs-num i").removeClass("active");		
+				$("#slides-flash .swipejs-num i").eq(i-1).addClass("active")		
+				$("#slides-flash .index").html(i);
+				  
+			}
+		});
+		
+		 
+	}); 
+   
+  </script>

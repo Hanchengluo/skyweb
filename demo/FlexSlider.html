@@ -1,0 +1,27 @@
+ <link rel="stylesheet" href="jquery/flexslider/flexslider.css" type="text/css" media="screen" />
+ <h3>flexslider <a href="jquery/flexslider/demo/index.html" target="_blank">更多</a></h3>
+ <section class="slider">
+        <div class="flexslider ">
+          <ul class="slides">
+              <li><a href="" target="_blank"><img src="http://skyshop.deitui.com/attach/ad/0/0/0/1/1/46b5d2cf93318ae337a61855cbf688de.jpg"   height="120px;"  /></a></li>
+                            <li><a href="" target="_blank"><img src= "http://skyshop.deitui.com/attach/ad/0/0/0/2/2/acce23b2d5304314fddfbe02440e0a58.jpg"   height="120px;"   /></a></li>
+                              <li><a href="" target="_blank"><img src="http://skyshop.deitui.com/attach/ad/0/0/0/1/1/46b5d2cf93318ae337a61855cbf688de.jpg"   height="120px;"  /></a></li>
+                            <li><a href="" target="_blank"><img src= "http://skyshop.deitui.com/attach/ad/0/0/0/2/2/acce23b2d5304314fddfbe02440e0a58.jpg"   height="120px;"   /></a></li>
+          </ul>
+        </div>
+      </section>
+ <script src="jquery/flexslider/jquery.flexslider.js"></script>
+ <script>
+ $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        pausePlay: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+ 
+ </script>
+ 

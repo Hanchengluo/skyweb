@@ -1,0 +1,105 @@
+ <div class="comblock" style="position:relative;">
+ 	<div class="tab-select ">
+    		<div class="item" id="tab-category-box" to="category-box"><span class="t">全部分类</span> <i class="t3down "></i><b></b></div>
+            
+            <div class="item" id="tab-scarea-box" to="scarea-box"><span class="t">区域</span> <i class="t3down"></i><b></b></div>
+            	
+    		 
+    		<div class="item" id="tab-choice-box" to="choice-box"><span class="t">筛选</span> <i class="t3down"></i></div>
+    </div>
+	
+    <div id="category-box" name="category" class="tab-select-box">
+    	<div class="box1">
+        	<div class="pd">
+        	        	<div   to="c8" class="box1item   ">美食</div>
+            
+                    	<div   to="c9" class="box1item   ">服饰</div>
+            
+             
+            </div>
+        </div>
+        <div class="box2">
+         <div class="pd">
+        	            <div   v="8" class="box2item   c8 show ">美食</div>
+                                    <div   v="9" class="box2item   c9 show ">服饰</div>
+                    	<div   v="10" class="box2item   c9  ">服装</div>
+                    	<div   v="11" class="box2item   c9  ">鞋子</div>
+                         
+            </div> 
+        </div>
+
+                     
+    </div>
+    
+    
+    
+    <div id="scarea-box" name="cityid" class="scarea-box tab-select-box">
+    	<a class="item" v="">全部</a>
+                          <a class="item" v="18">洪山区</a>
+                            <a class="item" v="23">大戏</a>
+                            <a class="item" v="24">xiaos</a>
+                            <a class="item" v="25">订单</a>
+                     
+    </div>
+    
+    <div id="choice-box" name="filter" class="choice-box tab-select-box">
+    	<a class="item" v="">全部</a>
+    	<a class="item" v="isrecommend">推荐</a>
+        <a class="item" v="isnew">最新</a>
+    </div>
+
+  
+ </div> 
+
+<script>
+
+ 	$(function(){
+			$(document).on("click",".box1item",function(e){
+				e.preventDefault();
+				
+				$(".box1item").removeClass("active");
+				$(this).addClass("active");
+				$(".box2item").hide();
+				$(".box2item."+$(this).attr("to")).css({display:"block"});
+			});
+			
+			$(document).on("click",".box2item",function(){
+			 
+				$(".box2item").removeClass("active");
+				$(this).addClass("active");
+				$("#tab-category .t").text($(this).text());
+				 
+				$("#category-box").hide();
+			});
+
+			$(document).on("click",".tab-select .item",function(){
+				var to=$(this).attr("to");		 
+				$("#"+to).toggle().siblings(".tab-select-box").hide();
+			});			
+			$(document).on("click",".tab-select-box .item",function(){
+				$(".tab-select-box").hide();
+				var para=$(this).parents(".tab-select-box").attr("name");
+				var v=$(this).attr("v");
+				per_page=0;
+				first=1;
+				switch(para){
+					case "category":
+							catid=v;
+						break;
+					case "order":
+							orderby=v;
+						break;
+					case "filter":
+							filter=v;
+						break;
+					case "cityid":
+							cityid=v;
+						break;
+				}
+				$("#tab-"+$(this).parents(".tab-select-box").attr("id")+" .t").text($(this).text());
+
+			 
+			});
+		});
+
+</script>

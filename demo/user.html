@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>skyshop仿小米商城--deitui.com</title>
+<meta name="keywords" content="skyshop仿小米商城" />
+<meta name="description" content="skyshop仿小米商城" />
+ <base href="http://skyshop.deitui.com/"> 
+<link href="/plugin/skyweb/skyweb.css" rel="stylesheet">
+<link href="/plugin/iconfont/iconfont.css" rel="stylesheet">
+ <script src="/plugin/jquery/jquery-2.1.3.min.js"></script>
+<script src="/plugin/skyweb/skyweb.js"></script>
+<script src="/static/js/app.js?v=32"></script>
+<script>
+var IMAGES_SITE="http://skyshop.deitui.com/"; 
+</script>
+<link href="/static/css/app.css" rel="stylesheet" />
+<link href="/themes/skyshop/index/css/mi.css" rel="stylesheet" />
+<link href="/themes/skyshop/index/images/app.css" rel="stylesheet" />
+<style>
+.box960{width:1226px;}
+.mgr0{margin-right:0px !important;}
+.breadcrumb{padding:15px 15px;}
+</style>
+</head>
+<body>
+<div class="page"> <div class="header" style="background-color:#fff;">
+	<div class="nav-top">
+        	<div class="box960">
+            	欢迎使用SKYSHOP商城系统
+                <div class="right">
+                            
+            <div class="item">
+            	<div class="dropdown">
+                  <a data-toggle="dropdown" href="#">lrjxgl<b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                   <li><a href="/index.php?m=user">用户信息</a></li>
+                   <li><a href="/index.php?m=order&a=my">我的订单</a></li>
+                   <li><a href="/index.php?m=guest&a=my">我的预约</a></li>
+                   <li><a href="/index.php?m=login&a=logout">退出登陆</a></li>
+                  </ul>
+				</div>
+                
+            </div>
+             
+            
+                         <div class="item item-cart"><a href="/index.php?m=order_cart"><i class="iconfont icon-cart"></i> 购物车 <span class="cart-num" id="top_cart_num">( <span>0</span> )</span></a></div>
+                 
+                </div>
+            </div>
+        </div>
+         
+		<style>
+		.nav-top{color: #fff;background: #333; font-size:12px;}
+		.nav-top .item{float:left; margin-right:20px;}
+		.nav-top .item-cart{background-color:#f60; padding:0px 20px; font-size:12px;}
+		.nav-top .item-cart .icon-cart{font-size:18px;}
+		.nav-top .dropdown>a{color:#fff;}
+		.nav-top .item>a{color:#fff;}
+		img{border:0px;}
+		.minav{background-color:#fff; position:relative; padding: 12px 0 0 30px;    font-size: 16px;}
+		.minav .logo{float:left; margin-right:20px;}
+	 	.minav .item{float:left;}
+		.minav .item>a{    display: block;
+    padding: 26px 18px 38px;
+    color: #333;}
+	.minav .item>a:hover{color:#ff6700;}
+        </style>
+        <div class=" box960">
+        <div class="minav">
+        	
+        	<div class="logo "><a href="/index.php"><img src="http://skyshop.deitui.com/attach/site/2016/01/19/c1a3a4e87bc61d962c57a5518c7bbf0d.png" style="height:55px;    margin-top: 10px;" /></a></div>
+            <div class="item showallcatbox">
+            	<a href="javascript:;">全部商品分类</a>
+                <style>
+	.allcatbox{position:absolute; display:none; top:100%; left:0px;     background: rgba(0,0,0,0.5); border:1px solid #f90; z-index:9999 !important;}
+	.allcatbox .pd{padding:20px 0px;}
+	.allcatbox.index{display:block;height:460px;}
+	.allcatbox .cat1{display:block; width:264px;}
+	
+	
+	.allcatbox .cat1>a{padding:11px 10px; display:block; text-decoration:none;color:#fff;}
+	.allcatbox .cat1>a .iconfont{float:right;}
+	.allcatbox .cat1:hover{background-color:#ff6700;}
+	.allcatbox .cat1:hover>a{color:#fff;}
+	.allcatbox .childbox{display:none; position:absolute; left:235px; top:0px; bottom:0px; background-color:#fff; width:200px; border:1px solid #eee; padding:20px;}
+	.allcatbox .child{display:block;  height:50px; line-height:50px; margin-bottom:10px;}
+	.allcatbox .child .img img{width:40px; float:left; margin-right:20px;}
+</style>
+<div class="allcatbox ">
+	<div class="pd">
+	            <div class="cat1" v="5"><a href="/index.php?m=list&catid=5">手机平板 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox5">
+                            <a href="/index.php?m=show&id=6861" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/61/6861/1bde4b76b2aed786921cd0889b2e87bf.jpg.100x100.jpg"></span>  小米手机4 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="6"><a href="/index.php?m=list&catid=6">电视盒子 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox6">
+                            <a href="/index.php?m=show&id=6862" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/62/6862/b220e82401e88e6632eaf558debd0c5b.jpg.100x100.jpg"></span>  小米电视主机 </a>
+                            <a href="/index.php?m=show&id=6865" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/65/6865/a5586dfc7d8b1580e05bd64c62df0cc4.png.100x100.jpg"></span>  小米盒子mini版(礼 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="7"><a href="/index.php?m=list&catid=7">智能硬件 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox7">
+                            <a href="/index.php?m=show&id=6863" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/63/6863/53a79d66137dd2fa19a6a10b6f3fd197.jpg.100x100.jpg"></span>  小米路由器 mini </a>
+                            <a href="/index.php?m=show&id=6864" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/64/6864/4e0645c4b014261103416cdaa4062edc.jpg.100x100.jpg"></span>  小米手环 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="8"><a href="/index.php?m=list&catid=8">电源插线 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox8">
+                        </div>
+                </div>
+                   <div class="cat1" v="9"><a href="/index.php?m=list&catid=9">耳机音响 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox9">
+                            <a href="/index.php?m=show&id=6866" class="child"><span class="img"><img src="http://skyshop.deitui.com/attach/product/0/0/68/66/6866/a7e533ef346e9f2eb139667b63524187.jpg.100x100.jpg"></span>  小米蓝牙耳机 </a>
+                        </div>
+                </div>
+                   <div class="cat1" v="10"><a href="/index.php?m=list&catid=10">电池存储卡 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox10">
+                        </div>
+                </div>
+                   <div class="cat1" v="11"><a href="/index.php?m=list&catid=11">保护套 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox11">
+                        </div>
+                </div>
+                   <div class="cat1" v="12"><a href="/index.php?m=list&catid=12">贴膜 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox12">
+                        </div>
+                </div>
+                   <div class="cat1" v="13"><a href="/index.php?m=list&catid=13">服装 <i class="iconfont icon-you"></i></a>
+                         
+            <div class="childbox  childbox13">
+                        </div>
+                </div>
+               </div>
+</div>
+
+<script>
+	$(document).on("mouseenter",".showallcatbox",function(){
+		$(".allcatbox").show();
+	});
+	$(document).on("mouseleave",".showallcatbox",function(){
+		$(".allcatbox").hide();
+	});
+	$(document).on("mouseenter",".allcatbox .cat1",function(){
+		var v=$(this).attr("v");
+		$(".childbox").hide();
+		$(".childbox"+v).show();
+		
+	});
+	
+	$(document).on("mouseleave",".allcatbox .cat1",function(){
+ 
+		$(".childbox").hide();
+ 
+		
+	});
+</script>            </div>
+                        	             <div class="item"><a href="/index.php?m=list&catid=5">手机平板</a></div>
+                                     	             <div class="item"><a href="/index.php?m=list&catid=6">电视盒子</a></div>
+                                     	             <div class="item"><a href="/index.php?m=list&catid=7">智能硬件</a></div>
+                                     	                        	                        	                        	                        	                        	                        	                       <div class="item"><a href="/index.php?m=goldgoods">积分商城</a></div>
+            <div class="item"><a href="/index.php?m=article">资讯服务</a></div>
+            <div class="item"><a href="/index.php?m=forum">社区</a></div>
+           
+          
+            
+            <div class="item">
+            	<div style="position:absolute; right:10px; top:30px;">
+                	<div class="search-bar">
+                        <input type="text" class="search-input" id="search-word" style="width:200px; height:40px;" value="">
+                        <button type="button" class="search-btn btn-warning" style="background-color: #fff; height:42px;
+  color: #666; border:1px solid #aaa; cursor:pointer;" id="search-submit" ><i class="iconfont  icon-search"></i></button>
+                        <div class="clearfix"></div>
+                    
+               		</div>
+                    <ul class="search-like" style="display: none;">
+                    
+                   <li><a href="/index.php?m=search&type=product&keyword=">搜索<font color="red">  </font>相关产品</a></li>
+                    <li><a href="/index.php?m=search&type=article&keyword=">搜索<font color="red">  </font>相关文章</a></li>
+                   </ul>
+                
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+    </div>	 	 
+    </div>
+    
+<script>
+	function top_cart_num(){
+		$.get("/index.php?m=ajax&a=cart_num",function(data){
+			if(data>0){
+				$("#top_cart_num span").html(data).show();
+			}else{
+				$("#top_cart_num").hide();
+			}
+		});
+	}
+$(document).ready(function(){
+	var sarr=new Array(
+	
+	{url:"/index.php?m=search&type=product",word:"产品"},
+		{url:"/index.php?m=search&type=article",word:"文章"},
+		{url:"/index.php?m=search&type=forum",word:"帖子"}
+	);
+	var keywords;
+	$("#search-word").keyup(function(){
+		keywords=$("#search-word").val();
+		str="";
+		for(var i=0;i<sarr.length;i++){ 
+			str+="<li><a href='"+sarr[i].url+"&keyword="+keywords+"'>搜索<font color='red'> "+keywords+" </font>相关"+sarr[i].word+"</a></li>";
+		}
+		
+		$(".search-like li").remove();
+		$(".search-like").append(str).show();
+	})
+	$("#search-word").bind("focus click",function(){
+		keywords=$("#search-word").val();
+		if(keywords!=''){ 
+		str="";
+			for(var i=0;i<sarr.length;i++){ 
+				str+="<li><a href='"+sarr[i].url+"&keyword="+encodeURI(keywords)+"'>搜索<font color='red'> "+keywords+" </font>相关"+sarr[i].word+"</a></li>";
+			}
+		$(".search-like li").remove();
+		$(".search-like").append(str).show();
+		}
+	})
+	
+	$(".search-like").on("mouseleave focusout",function(){
+		$(".search-like").hide();
+	});
+	
+	$("#search-submit").on("click",function(){
+		keywords=$("#search-word").val();
+		if(keywords!=''){ 
+			window.location.href="/index.php?m=search&type=product&keyword="+encodeURI(keywords);		
+		}
+	});
+	
+	top_cart_num();
+	
+});
+</script>  <div class="main-body  box960">
+<div class="row">
+<div class="col-6-1"><div class="w98">
+<div class="userpanel">
+	<div class="hd">管理面板</div>
+    <div class="item"><a href="/index.php?m=user">个人中心</a></div>
+    <div class="item"><a href="/index.php?m=order&a=my">我的订单</a></div>
+    <div class="item"><a href="/index.php?m=goldorder&a=my">我的兑换</a></div>
+    <div class="item"><a href="/index.php?m=notice">消息</a></div>
+    <div class="item"><a href="/index.php?m=forum&a=my">我的帖子</a></div>
+    <div class="item"><a href="/index.php?m=pay_log">收支记录</a></div>
+    <div class="item"><a href="/index.php?m=recharge&a=my">充值记录</a></div>
+    <div class="item"><a href="/index.php?m=recharge">在线充值</a></div>
+    <div class="item"><a href="/index.php?m=comment&a=my">我的评论</a></div>
+    <div class="item"><a href="/index.php?m=guest&a=my">我的意见</a></div>
+    <div class="item"><a href="/index.php?m=user_address&a=my">收货地址</a></div>
+    <div class="item"><a href="/index.php?m=user&a=info">用户信息</a></div>
+    <div class="item"><a href="/index.php?m=user&a=password">修改密码</a></div>
+    <div class="item"><a class="no" href="/index.php?m=login&a=logout">退出登陆</a></div>
+     
+</div>
+
+ </div></div>
+<div class="col-6-5"> 
+<ul class="nav nav-tabs" >
+<li class="active"><a href="#p_base">用户中心</a></li>
+</ul>
+<div style="width:95%; margin:0 auto;">
+
+<div class="row" style="margin-bottom:10px;">
+	<div class="col-4-3"><div class="w98"><div class="hd-h3" style="border-bottom:1px solid #ccc;">基本资料</div></div></div>
+    <div class="col-4-1"><div class="w98"><div class="hd-h3" style="border-bottom:1px solid #ccc;"><div class="hd-h3">网站动态</div></div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-4-1">
+<div style="width:100px; margin:0 auto; text-align:center;"><img src="http://skyshop.deitui.com//static/images/user_head.jpg.100x100.jpg" width="100"><br>
+<a href="/index.php?m=user&a=user_head">更改</a>
+</div>
+</div>
+<style>
+	.uinfo{line-height:25px;}
+</style>
+<div class="col-2-1 uinfo">
+	<div>
+    	<div>用户名：lrjxgl &nbsp;&nbsp;用户名：lrjxgl &nbsp;&nbsp; <a href="/index.php?m=user&a=info">编辑</a></div>
+        <div>手机：0 &nbsp;&nbsp;邮箱：362606856@qq.com</div>
+        <div>注册时间：2016-01-19</div>
+        <div>账号余额：￥0.00元 </div>
+    </div>
+</div>
+
+<div class="col-4-1">
+ 
+                                          <div style="border-bottom:1px dotted #ccc; line-height:25px; margin-bottom:2px;"><a href="/index.php?m=show&id=6860">杨浩涌：58赶集模式过时，不是有流</a></div>
+                          
+</div>
+</div>
+
+ 
+ 
+
+<div class="hd-h3" style="border-bottom:1px solid #ccc; margin-bottom:10px;">近期订单</div> 
+<div id="jqboxs"></div>
+ <script>
+ 	$.get("/index.php?m=order&a=my",function(data){
+		$("#jqboxs").html($(data).find("#jqbox").html());
+	});
+ </script>
+ </div>
+ 
+</div> 
+ </div>
+</div>
+ 
+
+<div class="footer">
+    	<div class="row box960">
+        	<div class="col-3-1">
+            	<div class="footer-border">
+                	<div class="footer-hd">关于我们</div>
+                    <p>打造创业者与投资者的桥梁</p>
+                </div>
+            </div>
+            <div class="col-3-1">
+            	<div class="footer-border">
+                	<div class="footer-hd">联系我们</div>
+                    <p>QQ:362606856</p>
+                </div>
+            </div>
+            <div class="col-3-1">
+            	<div>
+                	<div class="footer-hd">加入我们</div>
+                    <p>欢迎您的加入</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+  </div>
+</body>
+</html>

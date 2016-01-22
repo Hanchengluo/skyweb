@@ -1,0 +1,26 @@
+ 		<h3>jquery.cycle.all.js</h3>
+        <div class="row" style="position:relative;">
+            <ul class="slider_pic" id="slider_pic">
+                                          <li><a href="" target="_blank"><img src="http://skyshop.deitui.com/attach/ad/0/0/0/1/1/46b5d2cf93318ae337a61855cbf688de.jpg"   height="120px;"  /></a></li>
+                            <li><a href="" target="_blank"><img src= "http://skyshop.deitui.com/attach/ad/0/0/0/2/2/acce23b2d5304314fddfbe02440e0a58.jpg"   height="120px;"   /></a></li>
+                          </ul>
+            <div id="slider-num" class="slider-num"></div>
+            <div id="slider-prev" class="slider-prev" ><i class="iconfont icon-zuo"></i></div>
+            <div id="slider-next" class="slider-next"><i class="iconfont icon-you"></i></div>
+          </div>
+  
+  <script src="jquery/cycle/jquery.cycle.all.js"></script>
+ <script>
+    $(function(){
+		$("#slider_pic li").css("width",$("#slider_pic li").parents("div").width());
+		
+		//$("#slider_pic img").css("height",$("#slider_pic li").parents("div").height());
+		$('#slider_pic').cycle({
+		fx: 'scrollLeft',
+		timeout: 5000,
+		pager:'#slider-num',
+		prev:'#slider-prev',
+		next:'#slider-next'
+		}); 
+	});
+    </script>

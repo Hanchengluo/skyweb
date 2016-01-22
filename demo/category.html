@@ -1,0 +1,141 @@
+<div class="pd-5">
+  <h3>竖排分类</h3>
+  <div class="cat-list">
+    <div class="hd"><span>分类导航</span></div>
+    <a class="item">分类一</a> <a class="item">分类一</a> <a class="item">分类一</a>
+    <div class="cat-list-2nd"> <a class="item">分类一</a> <a class="item">分类一</a> <a class="item">分类一</a>
+      <div class="cat-list-3nd"> <a class="item">分类一</a> <a class="item">分类一</a> <a class="item">分类一</a> </div>
+    </div>
+  </div>
+  <h3>横排分类</h3>
+  <div class="row row-cat-list">
+    <div class="pd">
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">人像</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">婚纱</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">风景</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">海外</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">人像</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">婚纱</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">风景</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="pd">
+          <div class="hd  "><a href="#">海外</a></div>
+          <div class="row-cat-child">
+            <div class="child "><a href="#">糖水</a></div>
+            <div class="child "><a href="#">妆面</a></div>
+            <div class="child "><a href="#">黑白</a></div>
+            <div class="child "><a href="#">日系</a></div>
+            <div class="child "><a href="#">其他</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h3>弹框分类</h3>
+  <div class="showallcatbox " style=" position:relative" ><div class="btn">显示分类</div>
+  <?php include "allcat.html";?></div>
+  <h3>分类属性选项</h3>
+  <?php include "search_filter.html";?></div>
+</div>
+
+
+<script>
+	$(document).on("click",".showallcatbox",function(){
+		$(".allcatbox").toggle();
+	});
+	$(document).on("mouseleave",".showallcatbox",function(){
+		$(".allcatbox").hide();
+	});
+	$(document).on("mouseenter",".allcatbox .cat1",function(){
+		var v=$(this).attr("v");
+		$(".allcatbox .childbox").hide();
+		$(".allcatbox .childbox"+v).show();
+		
+	});
+	
+	$(document).on("mouseleave",".allcatbox .cat1",function(){
+ 
+		$(".allcatbox .childbox").hide();
+ 
+		
+	});
+</script>
