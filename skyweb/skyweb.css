@@ -990,12 +990,12 @@ font-weight: bold;
 .tabs:after{clear:both; visibility:hidden; display:block; content:"."; height:0px;}
 .tabs li{  float:left; list-style-type:none; margin-left:10px;}
 .tabs li a{    display: block;
-    padding: 10 25px;
+    padding: 10px 25px;
     border: 1px solid #ddd;
     border-bottom: 0;
     border-radius: 5px 5px 0 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     background: #f8f8f8;
     background: -webkit-gradient(linear,0% 0%,0% 100%,from(#fdfdfd),to(#f8f8f8));
     background: -webkit-linear-gradient(#fdfdfd,#f8f8f8);
@@ -1006,12 +1006,35 @@ font-weight: bold;
 .tabs li a.active,.tabs li a.active{
 	background:none;
 }
+ .tabs-small li{margin-left:0px;}
  .tabs-small li a{padding: 0 15px;}
 .tabs-item{display:none;}
 .tabs-hd{height:30px; line-height:30px; background-color:#f8f8f8;}
 .tabs-hd .title{padding-left:10px;}
 .tabs-box .active{display:block;}
-
+.index-tabs  {
+	border:0px;
+}
+.index-tabs   li {
+	width: 33.3333%;
+	margin:0px;
+}
+.index-tabs   li a {
+	text-align: center;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius:0px;
+}
+.index-tabs   li a.active {
+	border-bottom: 0px;
+	border-top: 2px solid #F60;
+}
+.tabs-item .dot-border li {
+	border-bottom: 1px dotted #ccc;
+	margin-bottom: 1px;
+	height: 25px;
+	line-height: 25px;
+}
 /*tabs-border**/
 .tabs-border{ width:100%; height:40px;border-bottom:1px solid #ccc; background-color:#fff;}
 .tabs-border .item,.tabs-border li a{background:none; border-radius:0px; border:0px;padding:0px 20px; display:block; float:left;border-bottom:1px solid #ccc; height:40px; line-height:40px;color:#4995D5; }
