@@ -7,6 +7,7 @@
 <script src="skyweb/jquery.js"></script>
 <script src="skyweb/skyweb.js"></script>
 <link href="skyweb/skyweb.css" rel="stylesheet" type="text/css">
+<link href="skyweb/skywap.css" rel="stylesheet" type="text/css">
 <link href="iconfont/iconfont.css" rel="stylesheet" type="text/css">
  <link href="app.css" rel="stylesheet" type="text/css">
 </head>

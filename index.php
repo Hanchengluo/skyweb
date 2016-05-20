@@ -7,6 +7,7 @@
 <script src="skyweb/jquery.js"></script>
 <script src="skyweb/skyweb.js"></script>
 <link href="skyweb/skyweb.css" rel="stylesheet" type="text/css">
+<link href="skyweb/skywap.css" rel="stylesheet" type="text/css">
 <link href="iconfont/iconfont.css" rel="stylesheet" type="text/css">
  <link href="app.css" rel="stylesheet" type="text/css">
 </head>
@@ -89,7 +90,14 @@
     </div>
     
      
-    
+    <div class="skypanel">
+    	<div class="pd">
+        	<div class="skypanel-toggle hd">评分</div>
+            <div class="skypanel-box">
+            	<?php include "demo/raty.html";?>
+            </div> 
+        </div>
+    </div>
      
     
      <div class="skypanel">

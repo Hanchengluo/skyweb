@@ -121,6 +121,23 @@ function skyToast(message,type){
 	},2000);
 }
 /*End toast*/
+/***评分插件****/
+function js_raty(id,grade,num){
+		if(num==undefined){
+			num=5;
+		}
+		var html="";
+		for(i=0;i<grade;i++){
+			html=html+'<i  class="raty-good"></i>';
+		}
+		var j=Math.max(0,num-grade);
+		for(i=0;i<j;i++){
+			html=html+'<i  class="raty-bad"></i>';
+		}
+		$(id).find(".m-raty-level").html(html);
+		$(id).find(".raty-grade").val(grade);
+		$(id).find(".raty-text").html("+"+grade);
+	}
 
 function placeholder(obj){
 		obj.bind({
@@ -277,7 +294,7 @@ function uploadError(e) { // upload error
 */
 
 $(function(){
-	$(document).on("click mouseover",".tabs a",function(e){ 
+	$(document).on("click mouseover",".js-tabs a",function(e){ 
 		e.preventDefault();
 		var p=$(this).parents(".tabs-box");
 		p.find("a").removeClass("active");
@@ -334,6 +351,22 @@ $(function(){
 
 	$(document).on("click",'[data-toggle="dropdown"]',function(){
 		$(this).parents(".dropdown").find(".dropdown-menu").toggle();
+	});
+	
+	$(document).on("click",".js-raty i",function(){
+		var num = $(this).index();
+		var pmark = $(this).parents('.m-raty-level');
+ 
+		
+		var list = $(this).parent().find('i');
+		for(var i=0;i<=num;i++){
+			list.eq(i).attr('class','raty-good');
+		}
+		for(var i=num+1,len=list.length-1;i<=len;i++){
+			list.eq(i).attr('class','raty-bad');
+		}
+		$(this).parents(".js-raty").find(".raty-grade").val(num+1);
+		$(this).parents(".js-raty").find(".raty-text").html("+"+(num+1));
 	});
 	
 	
