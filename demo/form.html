@@ -1,33 +1,77 @@
+<style>
+	.input-row .g-sd1{line-height:38px; text-align:right;   margin-right:-60px; width:60px;}
+	 
+</style>
 <div class="pd-5">
             <div class="input-row">
               <label>名字</label>
               <input type="text" placeholder="请输入名字" >
             </div>
             <div class="input-row">
-              <label>密码</label>
-              <input type="password" class="txt" placeholder="请输入密码" >
+              <div class="g-sd1">密码</div>
+              <div class="g-mn1">
+             	 <div class="g-mn1c"><input type="password" class="txt" placeholder="请输入密码" ></div>
+              </div>
             </div>
-            <div class="row mgb-10">
-                <div class="radio-js">
-                    <input type="hidden" name="gender" value="1">
-                    <div class="label">性别</div>
-                    <div class="radio-item active l" v="1">男</div>
-                    <div class="radio-item r" v="2">女</div>
+            <div class="input-row">
+            	<div class="g-sd1"><div class="label">性别</div></div>
+                <div class="g-mn1">
+                	<div class="g-mn1c">
+                    	<div class="radio-js">
+                            <input type="hidden" name="gender" value="1">
+                            
+                            <div class="js-radio radio-item active l" v="1">男</div>
+                            <div class="js-radio radio-item r" v="2">女</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="btn-upload">
-            	<i class="iconfont icon-upload"></i> 上传图片
-            	<div class="btn-upload-file">
-                	<input type="file"> 
+            <div class="input-row">
+            	<div class="g-sd1"><div class="label">性别</div></div>
+                <div class="g-mn1">
+                	<div class="g-mn1c">
+                    	<div class="radio-js">
+                           
+                            
+                            <div class="js-checkbox radio-item active l" v="1">男 
+                            	<input type="checkbox" name="gender[]" value="1">
+                            </div>
+                            <div class="js-checkbox radio-item r" v="2">女
+                            	<input type="checkbox" name="gender[]" value="2">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
+            <div class="input-row">
+            	<div class="g-sd1">&nbsp;</div>
+                <div class="g-mn1">
+                	<div class="g-mn1c">
+						<div class="upload-row">
+                        <div class="btn-upload">
+                            <i class="iconfont icon-upload"></i> 上传图片
+                            <div class="btn-upload-file">
+                                <input type="file" class="upload-field" id="upimg"> 
+                            </div>
+                        </div>
+						<input type="hidden" name="imgurl"  class="upload-field" value="">
+						<span class="upload-show"> <img src=" " width="100">  </span>
+						</div>
+                    </div>
+                </div>    
+            </div>
             <div style=" position:relative; margin:10px;">
                 	<div class="search-bar">
-                        <input type="text" class="search-input" id="search-word" style="width:200px; height:40px;" value="">
-                        <button type="button" class="search-btn btn-warning" style="background-color: #fff; height:42px;
-  color: #666; border:1px solid #aaa; cursor:pointer;" id="search-submit"><i class="iconfont  icon-search"></i></button>
+                        <div class="g-mn2">
+                            <div class="g-mn2c">
+                            	<input type="text" class="search-input" id="search-word" placeholder="请输入关键字"  value="">
+                            </div>
+                        </div>
+                        <div class="g-sd2">
+                        	<button type="button" class="search-btn" id="search-submit"><i class="iconfont  icon-search"></i></button>
+  </div>
                         <div class="clearfix"></div>
                     
                		</div>

@@ -113,16 +113,8 @@
     	<div class="pd">
         	<div class="skypanel-toggle hd">轮显</div>
             <div class="skypanel-box active">
-            	<div class="row">
-                 		<div class="col-3-1">
-                    	<?php include "demo/cycle.html";?>
-                   		</div>
-                        <div class="col-3-1">
-                    	<?php include "demo/swipe.html";?>
-                   		</div>
-                        <div class="col-3-1">
-                    	<?php include "demo/FlexSlider.html";?>
-                   		</div>
+            	<div class="row">                 		                          
+                    	<?php include "demo/FlexSlider.html";?>                  		 
                 </div>
             </div>
         </div>
@@ -132,7 +124,7 @@
     	<div class="pd">
         	<div class="skypanel-toggle hd">模板</div>
             <div class="skypanel-box">
-            	<div class="data-list">
+            	<div class="data-list you">
                 	<a class="item" target="_blank" href="demo/page.html">首页</a>
                     <a class="item" target="_blank" href="demo/list.html">列表页</a>
                     <a class="item" target="_blank" href="demo/detail.html">详细页</a>
